@@ -4,11 +4,12 @@ function Rating({children}) {
   const initValue = ['☆', '☆', '☆', '☆', '☆'];
   const [state, setState] = useState(initValue);
   const starNumber = Number(children); 
+  console.log(starNumber);
 
   useEffect(() => {
-    setState(state.splice(0, Math.ceil(starNumber)));
-
+    setState(state.slice(0, Math.ceil(starNumber)));
   }, [starNumber]);
+
   return <div>{state}</div>;
 }
 

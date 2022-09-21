@@ -5,6 +5,7 @@ import Random from './components/Random.jsx';
 import BoxColor from './components/BoxColor';
 import CreditCard from './components/CreditCard.jsx';
 import Rating from './components/Rating'
+import DriverCard from './components/DriverCard.jsx';
 const idCardData = [
   {
     lastName: 'Doe',
@@ -45,7 +46,16 @@ function App() {
         bgColor="#ddbb55"
         color="white"
       />
-      <Rating>1.7</Rating>
+      <Rating>3</Rating>
+      <DriverCard
+        name="Dara Khosrowshahi"
+        rating={4.9}
+        img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+        car={{
+          model: 'Audi A3',
+          licensePlate: 'BE33ER',
+        }}
+      />
     </div>
   );
 }
